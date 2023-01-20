@@ -1,0 +1,16 @@
+#############################
+# zsh environment variables #
+#############################
+
+# Binary search paths
+typeset -U path PATH
+path=("~/.local/bin" $path)
+export PATH
+
+# Theme setup
+fpath=("$ZSH_HOME/themes" $fpath)
+autoload -Uz promptinit && promptinit
+prompt myu
+
+# Set editor to neovim
+EDITOR="/bin/nvim"

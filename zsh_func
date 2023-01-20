@@ -1,0 +1,29 @@
+#################
+# zsh functions #
+#################
+
+# Quickly edit zsh files and automatically reload zsh
+# If the first argument is given, the first file that starts with "zsh_$1" in $ZSH_HOME
+# is opened. Otherwise zshrc is opened.
+function ze {
+	local arg=$1
+
+	# Check if $arg is empty
+	if [[ -z "$arg" ]]; then
+		local file="$ZSH_HOME/zshrc"
+	else
+		# Search for files matching the pattern
+		local files="$(ls $ZSH_HOME/zsh_$arg*)" 2>/dev/null
+
+		# Check if any files matched and treat the argument as
+		# a new file otherwise
+		if [[ -n "$files" ]]; then
+			local file="$(echo $files | cut -d" " -f1)"
+		else
+			local file="$ZSH_HOME/zsh_$arg"
+		fi
+	fi
+
+	$EDITOR $file
+	exec zsh
+}

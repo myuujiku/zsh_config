@@ -1,0 +1,9 @@
+###############
+# zsh options #
+###############
+
+# Navigation
+setopt autocd
+
+# Disable annoying stuff
+unset beep

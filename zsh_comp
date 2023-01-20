@@ -1,0 +1,10 @@
+##################
+# zsh completion #
+##################
+
+# Load autocompletion
+autoload -Uz compinit
+compinit
+
+# Use menu style
+zstyle ':completion:*' menu select

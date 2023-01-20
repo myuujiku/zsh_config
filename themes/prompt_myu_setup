@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+prompt_opts=(cr percent sp)
+
+function prompt_myu_precmd {
+	vcs_info
+	PS1="%B[%F{cyan}%m%f%b:%B%F{yellow}%~%f]%b %B$vcs_info_msg_0_%b
+%B[%n] %F{red}⟫%f%F{green}⟫%f%F{blue}⟫%f%b "
+}
+
+function prompt_myu_setup {
+	autoload -Uz vcs_info
+	add-zsh-hook precmd prompt_myu_precmd
+	zstyle ':vcs_info:git:*' formats '(on %F{magenta}%b%f)'
+
+	PS2="... "
+}
+
+prompt_myu_setup "$@"

@@ -1,0 +1,11 @@
+###############
+# zsh include #
+###############
+
+# Source config files
+source $ZSH_HOME/zsh_alias
+source $ZSH_HOME/zsh_comp
+source $ZSH_HOME/zsh_env
+source $ZSH_HOME/zsh_func
+source $ZSH_HOME/zsh_keys
+source $ZSH_HOME/zsh_opts
