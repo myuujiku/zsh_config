@@ -17,6 +17,7 @@ key[Right]=${terminfo[kcuf1]}
 key[Shift+Tab]=${terminfo[kcbt]}
 key[Ctrl+Left]=${terminfo[kLFT5]}
 key[Ctrl+Right]=${terminfo[kRIT5]}
+key[Ctrl+Del]=${terminfo[kDC5]}
 
 function key_set {
 	[[ -n "$1" ]] && bindkey -- "$1" $2
@@ -32,6 +33,13 @@ key_set ${key[Shift+Tab]} reverse-menu-complete
 # Jump word
 key_set ${key[Ctrl+Left]} backward-word
 key_set ${key[Ctrl+Right]} forward-word
+
+# Kill word
+key_set ${key[Ctrl+Del]} kill-word
+
+# Remove path parts individually
+autoload -U select-word-style
+select-word-style bash
 
 # Search history with arrow keys
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search

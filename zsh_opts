@@ -7,3 +7,6 @@ setopt autocd
 
 # Disable annoying stuff
 unset beep
+
+# Globbing
+setopt extendedglob
