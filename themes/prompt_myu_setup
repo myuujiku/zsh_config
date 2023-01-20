@@ -4,8 +4,8 @@ prompt_opts=(cr percent sp)
 
 function prompt_myu_precmd {
 	vcs_info
-	PS1="%B[%F{cyan}%m%f%b:%B%F{yellow}%~%f]%b %B$vcs_info_msg_0_%b
-%B[%n] %F{red}⟫%f%F{green}⟫%f%F{blue}⟫%f%b "
+	PS1="%B[%F{cyan}%m%f%b:%B%F{yellow}%~%f] $vcs_info_msg_0_
+[%n] %F{red}⟫%f%F{green}⟫%f%F{blue}⟫%f%b "
 }
 
 function prompt_myu_setup {
