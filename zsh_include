@@ -2,6 +2,8 @@
 # zsh include #
 ###############
 
+fpath=("$ZSH_HOME/completions" $fpath)
+
 # Source config files
 source $ZSH_HOME/zsh_alias
 source $ZSH_HOME/zsh_comp
