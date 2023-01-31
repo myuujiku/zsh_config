@@ -17,7 +17,7 @@ key[Right]=${terminfo[kcuf1]}
 key[Shift+Tab]=${terminfo[kcbt]}
 key[Ctrl+Left]=${terminfo[kLFT5]}
 key[Ctrl+Right]=${terminfo[kRIT5]}
-key[Ctrl+Del]=${terminfo[kDC5]}
+key[Alt+Del]=${terminfo[kDC3]}
 
 function key_set {
 	[[ -n "$1" ]] && bindkey -- "$1" $2
@@ -35,7 +35,7 @@ key_set ${key[Ctrl+Left]} backward-word
 key_set ${key[Ctrl+Right]} forward-word
 
 # Kill word
-key_set ${key[Ctrl+Del]} kill-word
+key_set ${key[Alt+Del]} kill-word
 
 # Remove path parts individually
 autoload -U select-word-style
