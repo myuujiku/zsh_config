@@ -14,3 +14,8 @@ source $ZSH_HOME/zsh_opts
 
 # Source plugins
 source $ZSH_HOME/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+# Activate starship
+if $_starship; then
+	eval "$(starship init zsh)"
+fi

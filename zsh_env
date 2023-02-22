@@ -8,9 +8,18 @@ path=("~/.local/bin" $path)
 export PATH
 
 # Theme setup
-fpath=("$ZSH_HOME/themes" $fpath)
-autoload -Uz promptinit && promptinit
-prompt myu
+if ! $_starship; then
+	fpath=("$ZSH_HOME/themes" $fpath)
+	autoload -Uz promptinit && promptinit
+	prompt myu
+fi
 
 # Set editor to neovim
 EDITOR="/bin/nvim"
+
+# Config paths
+_conf=$ZSH_HOME/config
+
+export STARSHIP_CONFIG=$_conf/starship.toml
+
+unset _conf
