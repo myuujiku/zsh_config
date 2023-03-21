@@ -2,8 +2,7 @@
 # zsh aliases #
 ###############
 
-alias l='ls -alF'
+alias l='ls -alF --group-directories-first'
 alias c='clear'
 alias vim='nvim'
-alias myu_ssh='ssh root@myujiku.com'
 alias py='python'
