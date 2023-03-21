@@ -18,8 +18,5 @@ fi
 EDITOR="/bin/nvim"
 
 # Config paths
-_conf=$ZSH_HOME/config
-
-export STARSHIP_CONFIG=$_conf/starship.toml
-
-unset _conf
+export XDG_CONFIG_HOME=$ZSH_HOME/config
+export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship.toml
