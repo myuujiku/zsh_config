@@ -2,7 +2,7 @@
 # myu's zshrc #
 ###############
 
-ZSH_HOME="$HOME/.zsh"
+export ZSH_HOME="$HOME/.zsh"
 
 # History file
 HISTFILE="$ZSH_HOME/zsh_history"
